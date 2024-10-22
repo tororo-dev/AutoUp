@@ -1,10 +1,4 @@
 const discord = require("discord.js-selfbot-v13");
-const http = require("http");
-
-http.createServer((req, res) => {
-  res.writeHead(200, { "Content-Type": "text/plain" });
-  res.end("Start auto up");
-}).listen(3000);
 
 const client = new discord.Client({
   checkUpdate: false,
