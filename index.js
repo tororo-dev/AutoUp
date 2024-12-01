@@ -4,12 +4,12 @@ const client = new discord.Client({
   checkUpdate: false,
 });
 
-/* -------------------- Config --------------------*/
+/*-------------------- Config --------------------*/
 
 const upChannelId = "channel id";
 const token = "account token";
 
-/* -------------------- Event --------------------*/
+/*-------------------- Event --------------------*/
 
 client.on("ready", async () => {
   const upChannel = await client.channels.fetch(upChannelId);
@@ -23,7 +23,7 @@ client.on("ready", async () => {
   }, 3610000);
 });
 
-/* -------------------- Functions --------------------*/
+/*-------------------- Functions --------------------*/
 
 async function disboardBump(upChannel) {
   await upChannel.sendSlash('302050872383242240', 'bump');
@@ -40,6 +40,6 @@ async function dicoallUp(upChannel) {
   console.log('dicoall up!');
 }
 
-/* -------------------- Login --------------------*/
+/*-------------------- Login --------------------*/
 
 client.login(token);
